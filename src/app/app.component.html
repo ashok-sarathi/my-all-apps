@@ -1,1 +1,61 @@
-<router-outlet></router-outlet>
+<nav class="navbar navbar-expand-lg nav-bg-l-blue fixed-top">
+    <h4 role="button" routerLink="/" class="navbar-brand text-white">&lt;../&gt; - Learn Code</h4>
+    <button class="navbar-toggler btn btn-outline-dark" (click)="toggleMenu()"><i class="fa fa-angle-double-down fa-2x text-white"></i></button>
+    <div id="my-nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a role="button" class="nav-link text-white" routerLink="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a role="button" class="nav-link text-white" routerLink="/projects">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a role="button" class="nav-link text-white" routerLink="/about-us">About Us</a>
+            </li>
+            <li class="nav-item">
+                <a role="button" class="nav-link text-white" routerLink="/contact-us">Contact Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid mt-5 pt-2">
+    <router-outlet></router-outlet>
+</div>
+<footer class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-12">
+            <div class="mx-md-4 my-4">
+                <h5>Ashok Sarathi</h5>
+                <a href="tel:+917598480914">+917598480914</a><br>
+                <a href="mailto:ashoksarathi004@gmail.com">ashoksarathi004@gmail.com</a><br>
+            </div>
+        </div>
+        <div class="col-md-6 col-12 text-right">
+            <div class="mx-md-4 my-4">
+                <h5>See also on</h5>
+                <a class="mr-3" target="__blank" href="https://github.com/ashok-sarathi"><i class="fa fa-2x fa-github"></i></a>
+                <a class="" target="__blank" href="https://in.linkedin.com/in/ashok-sarathi"><i
+                        class="fa fa-2x fa-linkedin-square"></i></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div *ngIf="toggle" class="open-menu fixed-top  text-center">
+    <h4 role="button" class="text-white my-2">&lt;../&gt;</h4>
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a (click)="toggleMenu()" role="button" class="nav-link text-white" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+            <a (click)="toggleMenu()" role="button" class="nav-link text-white" routerLink="/projects">Projects</a>
+        </li>
+        <li class="nav-item">
+            <a (click)="toggleMenu()" role="button" class="nav-link text-white" routerLink="/about-us">About Us</a>
+        </li>
+        <li class="nav-item">
+            <a (click)="toggleMenu()" role="button" class="nav-link text-white" routerLink="/contact-us">Contact Us</a>
+        </li>
+    </ul>
+    <button (click)="toggleMenu()" class="btn btn-danger btn-block my-3" type="button">close</button>
+</div>

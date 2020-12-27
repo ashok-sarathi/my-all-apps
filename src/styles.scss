@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/bootstrap/dist/css/bootstrap.css';
+@import '../node_modules/font-awesome/scss/font-awesome.scss';
+
+@import './assets/scss/global';
+
+.nav-bg-l-blue {
+    background-color: $light-blue;
+}
+.navbar-brand:hover, .navbar-brand:focus {
+    outline: none;
+}
+
+footer {
+    background-color: $dark-blue;
+    color: $white;
+
+    a {
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}
+
+.open-menu {
+    height: 100vh;
+    background-color: #5e6679;
+}

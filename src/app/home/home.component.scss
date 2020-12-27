@@ -1,0 +1,13 @@
+@import '../../assets/scss/global';
+
+.cover-img {
+    max-height: 90vh;
+}
+
+.fixed-cover {
+    min-height: 90vh;
+
+    .cover-bg {
+        background-color: $light-blue;
+    }
+}
